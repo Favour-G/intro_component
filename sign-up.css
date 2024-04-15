@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+p {
+  font-size: 16px;
+}
+:root{
+  --color1: rgb(109, 21, 102);
+  --white: white;
+}
+body {
+  background-image: url("./images/bg-intro-desktop.png");
+  background-color: hsl(0, 84%, 71%);
+  padding: 4rem;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.left,
+.right {
+  flex: 1;
+  align-items: center;
+}
+.left{
+    margin: auto;
+}
+.left > h1 {
+  color: white;
+  color: var(--color1);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+.left > p {
+  width: 90%;
+  color: white;
+  line-height: 2rem;
+}
+.tryit {
+  background: hsl(248, 32%, 49%);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  border-radius: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+  box-shadow: 0 3px rgba(0, 0, 0, .2);
+}
+.tryit > span {
+  color: hsl(246, 25%, 77%);
+}
+.right> form{
+    background: white;
+    border-radius: .7rem;
+    box-shadow: 0 3px rgba(0, 0, 0, .2);
+    padding: 2rem;
+    width: 100%;
+    
+}
+.right>form>input{
+    border-radius: .4rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border-radius: .2rem;
+    border: .1rem solid hsl(246, 25%, 77%);
+    width: 100%;
+}
+.right>form>input::placeholder{
+    font-weight: 500;
+}
+.right>form>input:focus{
+    border: .1rem solid hsl(248, 32%, 49%);
+}
+.right>form>input[type=submit]{
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    box-shadow: 0 3px rgba(7, 53, 10, 0.582);
+    cursor: pointer;
+}
+.right>form>input[type=submit]:hover{
+    background:  hsl(153, 65%, 24%);
+}
+.right>form>p{
+    font-size: .5rem;
+    text-align: center;
+}
+.right>form>p>span{
+    color: red;
+    font-weight: 600;
+}
+@media(min-width: 481px) and (max-width:600px){
+  body{
+    background: rgb(201, 201, 21);
+  }
+}
+@media(max-width: 480px){
+  body{
+    background-image: url(./images/bg-intro-mobile.png);
+    background-color: cornflowerblue;
+  }
+  .container{
+    flex-direction: column;
+    gap: 0;
+  }
+  .left,.right{
+    flex: 1;
+  }
+  .left{
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .left>h1{
+    font-size: 2rem;
+  }
+  .left>p{
+    font-size: 1.2rem;
+  }
+  .tryit{
+    width: 90%;
+    font-size: .7rem;
+    margin-top: 1.5rem;
+  }
+  .right>form{
+    width: 90%;
+  }
+}
+footer{
+    padding-top: 8rem;
+}
